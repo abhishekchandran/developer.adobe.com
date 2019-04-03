@@ -183,7 +183,7 @@ async function computeNavPath(apiRoot, owner, repo, ref, isDev, logger, mountPoi
   for (let item of json.tree) {
     if (!summaryPath) {
       if (validMd.includes(item.path)) {
-        summaryPath = mountPoint + '/' + item.path.substring(0, item.path.indexOf('.'));
+        summaryPath = `${mountPoint}/${item.path.substring(0, item.path.indexOf('.'))}`;
         break;
       }
     }
